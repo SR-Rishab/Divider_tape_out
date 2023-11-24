@@ -12,3 +12,14 @@ Refer to [README](docs/source/index.rst#section-quickstart) for a quickstart of 
 Refer to [README](docs/source/index.rst) for this sample project documentation. 
 
 Refer to the following [readthedocs](https://caravel-sim-infrastructure.readthedocs.io/en/latest/index.html) for how to add cocotb tests to your project. 
+
+
+# 32-Bit Unsigned divider
+
+GDS generation
+
+![Screenshot from 2023-11-24 16-33-04](https://github.com/SR-Rishab/Divider_tape_out/assets/107171044/f5e48c21-b129-4736-b29d-01fd5b172168)
+
+Unsuccesful push
+
+![Screenshot from 2023-11-24 17-57-36](https://github.com/SR-Rishab/Divider_tape_out/assets/107171044/c9f09a9f-04ee-4bf0-a37f-cf41e5d0cbcc)
