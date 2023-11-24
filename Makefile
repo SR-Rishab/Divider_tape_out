@@ -332,19 +332,18 @@ setup-timing-scripts: $(TIMING_ROOT)
 	@( cd $(TIMING_ROOT) && git pull )
 	@#( cd $(TIMING_ROOT) && git fetch && git checkout $(MPW_TAG); )
 
-.PHONY: install-caravel-cocotb
-install-caravel-cocotb:
+.PHONY: install-cocotb
+install-cocotb:
 	rm -rf ./venv-cocotb
 	$(PYTHON_BIN) -m venv ./venv-cocotb
-	./venv-cocotb/bin/$(PYTHON_BIN) -m pip install --upgrade --no-cache-dir pip
-	./venv-cocotb/bin/$(PYTHON_BIN) -m pip install --upgrade --no-cache-dir caravel-cocotb
+	./venv-cocotb/bin/$(PYTHON_BIN) -m pip install --upgrade --no-cache-dir cocotb
 
 .PHONY: setup-cocotb-env
 setup-cocotb-env:
 	@(python3 $(PROJECT_ROOT)/verilog/dv/setup-cocotb.py $(CARAVEL_ROOT) $(MCW_ROOT) $(PDK_ROOT) $(PDK) $(PROJECT_ROOT))
 
 .PHONY: setup-cocotb
-setup-cocotb: install-caravel-cocotb setup-cocotb-env simenv-cocotb
+setup-cocotb: install-cocotb setup-cocotb-env simenv-cocotb
 
 .PHONY: cocotb-verify-all-rtl
 cocotb-verify-all-rtl: 
